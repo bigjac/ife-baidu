@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>No.1 - 制作一个简单的菜单动画效果</title>
+    <style>
+        body {
+            font-size: 10px;
+        }
+        .text {
+            width: calc(1.6rem * 4);
+            margin: 5px;
+            font-size: 1.6rem;
+            position: relative;
+        }
+        .text::after {
+            content: '';
+            display: block;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: #1890FF;
+            transition: transform .3s ease-in-out;
+            transform-origin: center;
+        }
+        .text.active::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="text">前端学院</div>
+    <button>切换样式</button>
+    <script>
+        document.querySelector('button').addEventListener('click', () => {
+            document.querySelector('.text').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
