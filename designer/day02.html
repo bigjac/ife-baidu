@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>No.2 - 初步接触 CSS 2D 变形</title>
+    <style>
+        body {
+            font: 10px sans-serif;
+            color: #000;
+        }
+        .box {
+            display: inline-block;
+            box-sizing: border-box;
+            margin: 2rem;
+            padding: 0;
+            width: 60px;
+            height: 68px;
+            border: 2px solid #ebebeb;
+            background-color: #f7f6f6;
+            font-size: 1.18rem;
+            line-height: 68px;
+            text-align: center;
+        }
+        .box1 {
+            transform: skewX(30deg);
+        }
+        .box2 {
+            transform: scaleX(.5);
+        }
+        .box3 {
+            transform: rotate(45deg);
+        }
+        .box4 {
+            transform: translate(10px, 20px);
+        }
+        .box5 {
+            transform: scaleX(.5) skewX(30deg) rotate(45deg) translate(10px, 20px) ;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box0</div>
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+    <div class="box box5">box5</div>
+</body>
+</html>
